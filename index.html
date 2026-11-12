@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>UTS-M.Galang</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+<h1>Kalkulator Belanja Toko</h1>
+<h2>Hitung total belanja anda dan dapatkan diskonnya</h2>
+
+<label for="nama">Nama Pembeli:</label>
+<input type="text" id="nama" placeholder="contoh: Galang"><br/>
+
+<label for="harga">Harga Satuan (Rp):</label>
+<input type="number" id="harga" placeholder="contoh: 15000"><br/>
+
+<label for="jumlah">Jumlah Barang:</label>
+<input type="number" id="jumlah" placeholder="contoh: 5"><br/>
+
+<label for="status">Status Pembeli:</label>
+<select id="status">
+<option value="biasa">Non-Member</option>
+<option value="member">Member</option>
+</select>
+
+<button onclick="hitungBelanja()">Hitung</button>
+
+<p id="hasil" class="hasil"></p>
+
+<h2>Peraturan Diskon</h2>
+<table>
+<tr>
+<th>Subtotal Belanja</th>
+<th>Diskon</th>
+</tr>
+<tr>
+<td>Kurang dari Rp50.000</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>Rp50.000 sampai Rp99.999</td>
+<td>5%</td>
+</tr>
+<tr>
+<td>Rp100.000 ke atas</td>
+<td>10%</td>
+</tr>
+</table>
+<p>Member mendapat tambahan diskon 5%.</p>
+
+<h2>Simulasi Harga (tanpa diskon)</h2>
+<p id="simulasi"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
